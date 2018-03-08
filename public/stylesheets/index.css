@@ -1,0 +1,76 @@
+.listView {
+    background-color: white;
+    width: 90%;
+    margin: 40px auto;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.tagsView {
+    background-color: #f6f6f6;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 4px 4px 0 0;
+}
+
+.tagsView li {
+    display: inline-block;
+    line-height: 40px;
+}
+
+.tagsView a {
+    color: #80bd01;
+    margin: 0 10px;
+    padding: 2px 4px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.tagsView .selected {
+    background-color: #80bd01;
+    color: white;
+}
+
+.cell {
+    height: 30px;
+    border-bottom: solid 1px #f6f6f6;
+    font-size: 10px;
+    padding: 10px 10px;
+    display:flex;
+    display: -webkit-flex;
+    align-items:center;
+    flex-direction: row;
+    flex-shrink: 0;
+
+}
+
+.cell img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.cell a {
+    font-size: 16px;
+    color: #333;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1000;
+}
+
+.time {
+    color: #778087;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.tag_top {
+    font-size: 12px;
+    background-color: #80bd01;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 3px;
+    margin-left: 14px;
+}

@@ -1,0 +1,112 @@
+.body {
+    width: 90%;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+header {
+    padding: 14px 8px;
+    border-bottom: solid 1px rgb(240, 240, 240);
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+}
+
+header span {
+    background-color: #80bd01;
+    color: white;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+header h1 {
+    font-size: 22px;
+    display: inline-block;
+}
+
+.subTitle {
+    font-size: 12px;
+    color: #838383;
+    padding: 5px 0;
+}
+
+.subTitle li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.body .markdown-text {
+    padding: 10px 20px;
+    line-height: 30px;
+}
+
+.body .markdown-text img {
+    width: 90%;
+}
+
+.body .markdown-text a, .cell a {
+    color: #08c
+}
+
+footer {
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer header {
+    background-color: #f6f6f6;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    font-size: 14px;
+    border-radius: 5px 5px 0 0;
+}
+
+.cell {
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    color: #08c;
+    display: flex;
+    border-bottom: solid rgb(240, 240, 240) 1px;
+}
+
+.cell .reply_username {
+    font-weight: 500;
+    color: #666;
+}
+
+.cell img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.cell .markdown-text {
+    color: black;
+    font-size: 15px;
+    margin: 4px 4px;
+    line-height: 30px;
+}
+
+.collectButton {
+    color: white;
+    background-color: #80bd01;
+    padding: 4px 6px;
+    margin-left: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.selected {
+    color: rgb(105, 105, 105);
+    background-color: #ececec;
+}

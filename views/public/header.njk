@@ -1,3 +1,18 @@
-<div id="header">
-  This is header
-</div>
+<nav class="container">
+  <h1>CN<span>o</span>de</h1>
+  <ul>
+    <li>
+      <a href="">首页</a></li>
+    <li>
+      {% if user %}
+      <a href="#" id="logButton">{{user.loginname}}</a></li>
+      {% else %}
+      <a href="#" id="logButton">登陆</a></li>
+      {% endif %}
+  </ul>
+
+  <div id="loginView" style="display:none;">
+    <input type="text" name="" value="5cbf7c62-dfd1-481a-8dc0-52b02d86fd53" id="accesstokenLable">
+    <input type="button" value="登陆" id="loginButton">
+  </div>
+</nav>

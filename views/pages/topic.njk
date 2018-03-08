@@ -1,7 +1,53 @@
-{% extends "../public/main.njk" %}
+{% extends "../public/main.njk" %} 
+
+{% block css %}
+<link rel='stylesheet' href='/stylesheets/topic.css' /> 
+{% endblock %}
 
 {% block body %}
+<div class="body">
+  <header>
+    <div class="title">
+      <span>{{data | cnode_tag}}</span>
+      <h1>{{data.title}}</h1>
+      {% if user %}
+      {% if data.is_collect %}
+      <a href="" class="collectButton selected" topicId="{{data.id}}">取消收藏</a>
+      {% else %}
+      <a href="" class="collectButton" topicId="{{data.id}}">收藏</a>
+      {% endif %}
+      {% endif %}
+    </div>
+    <ul class="subTitle">
+      <li>发布于 {{data.create_at | last_reply_time}}</li>
+      <li>作者 {{data.author.loginname}}</li>
+      <li>{{data.visit_count}} 次浏览</li>
+      <li>来自 {{data | cnode_tag}}</li>
+    </ul>
+  </header>
+  {{data.content | safe}}
+</div>
 
-  <p>This is topic.njk</p>
+<footer>
+    <header>
+      {{data.reply_count}}回复
+    </header>
+    {% for reply in data.replies %}
+    <div class="cell">
+      <img src="{{reply.author.avatar_url}}" alt="">
+      <div>
+        <div>
+            <span class="reply_username">{{reply.author.loginname}}</span>
+            <span>{{loop.index}}楼</span>
+            <span>{{reply.create_at | last_reply_time}}</span>
+        </div>
+        {{reply.content | safe}}
+      </div>
+    </div>
+    {% endfor %}
+  </footer>
+{% endblock %}
 
+{% block script %}
+<script src='/javascripts/topic.js'></script>
 {% endblock %}
